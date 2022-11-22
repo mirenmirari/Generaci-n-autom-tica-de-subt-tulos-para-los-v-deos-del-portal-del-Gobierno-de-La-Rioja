@@ -1,5 +1,7 @@
 # Generación automática de subtítulos para los vídeos del portal del Gobierno de La Rioja
 
+Este repositorio es parte del Trabajo de Fin de Máster del Máster de Ciencia de Datos y Aprendizaje Automático de la Universidad de La Rioja.
+
 En el notebook wav2vec lo que hacemos es crear una serie de funciones que se encarguen de realizar los distintos pasos necesarios para transcribir un vídeo utilizando el modelo wav2vec. Después, se define una función que se encargue de ir llamando a dichas funciones y, además, de calcular el error cometido tanto con el texto normalizado como sin normalizar. Para acabar, lo que se hace es cargar los 74 vídeos del dataset junto con el texto escrito a mano y calcular, por medio de la última función definida, tanto los textos transcritos por el modelo como el error cometido por el mismo haciendo la media del error de cada vídeo.
 
 En los notebooks pocketsphinx y whisper_funciones la idea es la misma, solo que para los modelos pocketsphinx y whisper respectivamente. Además, en el notebook relativo a whisper se hace el mismo proceso para cada uno de los 5 tamaños de arquitectura posibles (Tiny, Base, Small, Medium y Large). En el notebook fine-tuning_small se comienza entrenando el modelo de whisper y, después, se vuelven a crear todas las funciones necesarias para hacer la transcripción. Nuevamente se cargan los 74 vídeos y sus textos originales y se aplica la función para calcular el texto transcrito por el modelo y el error cometido.
